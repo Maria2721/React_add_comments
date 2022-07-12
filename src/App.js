@@ -14,9 +14,8 @@ function App() {
 
   const submitComment = () => {
     generateColor();
-    let spamV = text.replace(/viagra/gi, "***");
-    let spamAll = spamV.replace(/XXX/gi, "***");
-    setComments([{ comment: spamAll, color: color }].concat(comments));
+    let spam = text.replace(/viagra|XXX/gi, "***");
+    setComments([{ comment: spam, color: color }].concat(comments));
     setText("");
     console.log(comments);
   };
